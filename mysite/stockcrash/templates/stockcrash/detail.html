@@ -1,0 +1,6 @@
+<h1>{{ stock.stock_name }}</h1>
+<ul>
+{% for info in stock.stockinfo_set.all %}
+    <li>{{ info.stock_info }}</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,10 @@
+{% if latest_stock_list %}
+    <ul>
+    {% for stock in latest_stock_list %}
+    <li><a href="{% url 'stockcrash:detail' stock.id %}">{{ stock.stock_name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No stocks are available.</p>
+{% endif %}
+
